@@ -9,18 +9,20 @@ import { requestBackend } from 'util/requests';
 
 type Props = {
   product: Product;
-  onDelete: () => void;
+  onDelete: Function;
 };
 
 const ProductCrudCard = ({ product, onDelete }: Props) => {
-  const handleDelete = (prodcutId: number) => {
-    if (!window.confirm('Tem certeza que deseja deletar?')) {
+
+  const handleDelete = (productId: number) => {
+
+    if (!window.confirm("Tem certeza que deseja deletar?")) {
       return;
     }
 
     const config: AxiosRequestConfig = {
       method: 'DELETE',
-      url: `/products/${prodcutId}`,
+      url: `/products/${productId}`,
       withCredentials: true,
     };
 
@@ -34,26 +36,21 @@ const ProductCrudCard = ({ product, onDelete }: Props) => {
       <div className="product-crud-card-top-container">
         <img src={product.imgUrl} alt={product.name} />
       </div>
-
-      <div className="product-crud-card-descrption">
+      <div className="product-crud-card-description">
         <div className="product-crud-card-bottom-container">
           <h6>{product.name}</h6>
           <ProductPrice price={product.price} />
         </div>
-
         <div className="product-crud-categories-container">
-          <div className="product-crud-categories-container">
-            {product.categories.map((category) => (
-              <CategoryBadge name={category.name} key={category.id} />
-            ))}
-          </div>
+          {product.categories.map((category) => (
+            <CategoryBadge name={category.name} key={category.id} />
+          ))}
         </div>
       </div>
-
       <div className="product-crud-card-buttons-container">
         <button
-          className="btn btn-outline-danger product-crud-card-button product-crud-card-button-first"
           onClick={() => handleDelete(product.id)}
+          className="btn btn-outline-danger product-crud-card-button product-crud-card-button-first"
         >
           EXCLUIR
         </button>

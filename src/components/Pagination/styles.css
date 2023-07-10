@@ -19,6 +19,10 @@
   margin-left: 10px;
 }
 
+.pagination-item.active {
+  background-color: #407bff;
+}
+
 .pagination-link-active {
   background-color: #407bff;
 }

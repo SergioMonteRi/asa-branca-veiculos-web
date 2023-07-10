@@ -1,9 +1,8 @@
 import { Switch } from 'react-router-dom';
-
 import Navbar from './Navbar';
 import Users from './Users';
-import Products from './Products';
 import PrivateRoute from 'components/PrivateRoute';
+import Products from './Products';
 
 import './styles.css';
 
@@ -14,7 +13,7 @@ const Admin = () => {
       <div className="admin-content">
         <Switch>
           <PrivateRoute path="/admin/products">
-            <Products/>
+            <Products />
           </PrivateRoute>
           <PrivateRoute path="/admin/categories">
             <h1>Category CRUD</h1>

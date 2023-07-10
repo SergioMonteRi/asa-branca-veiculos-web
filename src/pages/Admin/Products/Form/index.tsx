@@ -1,16 +1,13 @@
-import { useEffect, useState } from 'react';
-import Select from 'react-select';
-
-import { Product } from 'types/product';
-import { useForm, Controller } from 'react-hook-form';
-
-import { requestBackend } from 'util/requests';
 import { AxiosRequestConfig } from 'axios';
-import { useHistory, useParams } from 'react-router-dom';
-
-import { Category } from 'types/category';
-
+import { useState } from 'react';
+import { useEffect } from 'react';
 import CurrencyInput from 'react-currency-input-field';
+import { useForm, Controller } from 'react-hook-form';
+import { useHistory, useParams } from 'react-router-dom';
+import Select from 'react-select';
+import { Category } from 'types/category';
+import { Product } from 'types/product';
+import { requestBackend } from 'util/requests';
 import { toast } from 'react-toastify';
 
 import './styles.css';
@@ -46,6 +43,7 @@ const Form = () => {
     if (isEditing) {
       requestBackend({ url: `/products/${productId}` }).then((response) => {
         const product = response.data as Product;
+
         setValue('name', product.name);
         setValue('price', product.price);
         setValue('description', product.description);
@@ -64,18 +62,18 @@ const Form = () => {
     const config: AxiosRequestConfig = {
       method: isEditing ? 'PUT' : 'POST',
       url: isEditing ? `/products/${productId}` : '/products',
-      data: data,
+      data,
       withCredentials: true,
     };
 
     requestBackend(config)
-      .then(() => {
-        toast.info('Produto cadastrado com sucesso');
-        history.push('/admin/products');
-      })
-      .catch(() => {
-        toast.error('Erro ao cadastrar produto');
-      });
+    .then(() => {
+      toast.info('Produto cadastrado com sucesso');
+      history.push('/admin/products');
+    })
+    .catch(() => {
+      toast.error('Erro ao cadastrar produto');
+    });
   };
 
   const handleCancel = () => {
@@ -83,7 +81,7 @@ const Form = () => {
   };
 
   return (
-    <div className="product-form-container">
+    <div className="product-crud-container">
       <div className="base-card product-crud-form-card">
         <h1 className="product-crud-form-title">DADOS DO PRODUTO</h1>
 
@@ -108,15 +106,11 @@ const Form = () => {
                 </div>
               </div>
 
-              <div className="margin-bottom-30">
-                <label htmlFor="categories" className="d-none">
-                  Categories
-                </label>
+              <div className="margin-bottom-30 ">
+                <label htmlFor="categories" className="d-none">Categorias</label>
                 <Controller
                   name="categories"
-                  rules={{
-                    required: true,
-                  }}
+                  rules={{ required: true }}
                   control={control}
                   render={({ field }) => (
                     <Select
@@ -128,7 +122,6 @@ const Form = () => {
                       getOptionValue={(category: Category) =>
                         String(category.id)
                       }
-                      placeholder={'Categorias'}
                       inputId="categories"
                     />
                   )}
@@ -149,12 +142,11 @@ const Form = () => {
                     <CurrencyInput
                       placeholder="Preço"
                       className={`form-control base-input ${
-                        errors.price ? 'is-invalid' : ''
+                        errors.name ? 'is-invalid' : ''
                       }`}
                       disableGroupSeparators={true}
                       value={field.value}
                       onValueChange={field.onChange}
-                      allowNegativeValue={false}
                       data-testid="price"
                     />
                   )}
@@ -169,14 +161,13 @@ const Form = () => {
                   {...register('imgUrl', {
                     required: 'Campo obrigatório',
                     pattern: {
-                      value:
-                        /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/,
+                      value: /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/gm,
                       message: 'Deve ser uma URL válida',
                     },
                   })}
                   type="text"
                   className={`form-control base-input ${
-                    errors.imgUrl ? 'is-invalid' : ''
+                    errors.name ? 'is-invalid' : ''
                   }`}
                   placeholder="URL da imagem do produto"
                   name="imgUrl"
@@ -187,7 +178,6 @@ const Form = () => {
                 </div>
               </div>
             </div>
-
             <div className="col-lg-6">
               <div>
                 <textarea
@@ -196,19 +186,18 @@ const Form = () => {
                     required: 'Campo obrigatório',
                   })}
                   className={`form-control base-input h-auto ${
-                    errors.description ? 'is-invalid' : ''
+                    errors.name ? 'is-invalid' : ''
                   }`}
                   placeholder="Descrição"
                   name="description"
                   data-testid="description"
                 />
-              </div>
-              <div className="invalid-feedback d-block">
-                {errors.description?.message}
+                <div className="invalid-feedback d-block">
+                  {errors.description?.message}
+                </div>
               </div>
             </div>
           </div>
-
           <div className="product-crud-buttons-container">
             <button
               className="btn btn-outline-danger product-crud-button"

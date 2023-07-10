@@ -1,10 +1,10 @@
+import 'react-toastify/dist/ReactToastify.css';
 import 'assets/styles/custom.scss';
 import './App.css';
-import 'react-toastify/dist/ReactToastify.css';
 
+import { ToastContainer } from 'react-toastify';
 import Routes from 'Routes';
 import { useState } from 'react';
-import { ToastContainer } from 'react-toastify';
 import { AuthContext, AuthContextData } from 'AuthContext';
 
 function App() {

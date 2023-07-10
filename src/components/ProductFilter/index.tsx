@@ -1,12 +1,9 @@
-import { useEffect, useState } from 'react';
-import Select from 'react-select';
-import { Controller, useForm } from 'react-hook-form';
-
-import { requestBackend } from 'util/requests';
-
 import { ReactComponent as SearchIcon } from 'assets/images/search-icon.svg';
-
+import { useEffect, useState } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import Select from 'react-select';
 import { Category } from 'types/category';
+import { requestBackend } from 'util/requests';
 
 import './styles.css';
 
@@ -22,7 +19,7 @@ type Props = {
 const ProductFilter = ({ onSubmitFilter }: Props) => {
   const [selectCategories, setSelectCategories] = useState<Category[]>([]);
 
-  const { register, handleSubmit, control, setValue, getValues } =
+  const { register, handleSubmit, setValue, getValues, control } =
     useForm<ProductFilterData>();
 
   const onSubmit = (formData: ProductFilterData) => {
@@ -53,12 +50,12 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
 
   return (
     <div className="base-card product-filter-container">
-      <form onClick={handleSubmit(onSubmit)} className="product-filter-form">
+      <form onSubmit={handleSubmit(onSubmit)} className="product-filter-form">
         <div className="product-filter-name-container">
           <input
             {...register('name')}
             type="text"
-            className={'form-control'}
+            className="form-control"
             placeholder="Nome do produto"
             name="name"
           />
@@ -66,7 +63,6 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
             <SearchIcon />
           </button>
         </div>
-
         <div className="product-filter-bottom-container">
           <div className="product-filter-category-container">
             <Controller
@@ -86,13 +82,11 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
               )}
             />
           </div>
-
           <button
             onClick={handleFormClear}
             className="btn btn-outline-secondary btn-product-filter-clear"
           >
-            LIMPAR
-            <span className="btn-product-filter-word">FILTRO</span>
+            LIMPAR<span className="btn-product-filter-word"> FILTRO</span>
           </button>
         </div>
       </form>

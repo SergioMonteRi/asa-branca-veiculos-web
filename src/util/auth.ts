@@ -1,5 +1,5 @@
-import { Role } from "types/role";
-import { getTokenData } from "./token";
+import { Role } from 'types/role';
+import { getTokenData } from './token';
 
 export const isAuthenticated = (): boolean => {
   let tokenData = getTokenData();

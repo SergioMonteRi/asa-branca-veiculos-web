@@ -25,7 +25,7 @@ const findAllResponse = {
       name: 'Smart TV',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 2190,
+      price: 2190.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/2-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -45,7 +45,7 @@ const findAllResponse = {
       name: 'Macbook Pro',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1250,
+      price: 1250.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/3-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -61,7 +61,7 @@ const findAllResponse = {
       name: 'PC Gamer',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1200,
+      price: 1200.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/4-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -93,7 +93,7 @@ const findAllResponse = {
       name: 'PC Gamer Ex',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1350,
+      price: 1350.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/6-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -109,7 +109,7 @@ const findAllResponse = {
       name: 'PC Gamer X',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1350,
+      price: 1350.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/7-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -125,7 +125,7 @@ const findAllResponse = {
       name: 'PC Gamer Alfa',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1850,
+      price: 1850.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/8-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -141,7 +141,7 @@ const findAllResponse = {
       name: 'PC Gamer Tera',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1950,
+      price: 1950.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/9-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -157,7 +157,7 @@ const findAllResponse = {
       name: 'PC Gamer Y',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1700,
+      price: 1700.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/10-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -173,7 +173,7 @@ const findAllResponse = {
       name: 'PC Gamer Nitro',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1450,
+      price: 1450.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/11-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -189,7 +189,7 @@ const findAllResponse = {
       name: 'PC Gamer Card',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      price: 1850,
+      price: 1850.0,
       imgUrl:
         'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/12-big.jpg',
       date: '2020-07-14T10:00:00Z',
@@ -207,29 +207,32 @@ const findAllResponse = {
       unsorted: true,
       empty: true,
     },
+    offset: 0,
     pageNumber: 0,
     pageSize: 12,
-    offset: 0,
     paged: true,
     unpaged: false,
   },
   last: false,
   totalPages: 3,
   totalElements: 25,
-  first: true,
+  size: 12,
   number: 0,
   sort: {
     sorted: false,
     unsorted: true,
     empty: true,
   },
+  first: true,
   numberOfElements: 12,
-  size: 12,
   empty: false,
 };
 
 export const server = setupServer(
   rest.get(`${BASE_URL}/products`, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(findAllResponse));
+    return res(
+        ctx.status(200), 
+        ctx.json(findAllResponse)
+    );
   })
 );
