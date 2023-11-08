@@ -1,13 +1,19 @@
 .category-badge-container {
-  background-color: #c4c4c4;
-  padding: 7px;
-  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #eee69c;
+  background-color: #fdf9d7;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.category-badge-container p {
+  margin-bottom: 0px !important;
   color: #424242;
-  height: 33px;
   font-weight: bold;
   font-size: 14px;
-  text-align: center;
-  letter-spacing: -0.015em;
-  margin-right: 10px;
-  margin-bottom: 13px;
 }

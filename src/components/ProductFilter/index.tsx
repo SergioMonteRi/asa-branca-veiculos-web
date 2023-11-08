@@ -13,7 +13,7 @@ export type ProductFilterData = {
 };
 
 type Props = {
-  onSubmitFilter: (data: ProductFilterData) => void;
+  onSubmitFilter?: (data: ProductFilterData) => void;
 };
 
 const ProductFilter = ({ onSubmitFilter }: Props) => {
@@ -23,7 +23,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
     useForm<ProductFilterData>();
 
   const onSubmit = (formData: ProductFilterData) => {
-    onSubmitFilter(formData);
+    // onSubmitFilter(formData);
   };
 
   const handleFormClear = () => {
@@ -39,7 +39,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
       category: getValues('category'),
     };
 
-    onSubmitFilter(obj);
+    // onSubmitFilter(obj);
   };
 
   useEffect(() => {

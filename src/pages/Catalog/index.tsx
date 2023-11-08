@@ -1,5 +1,5 @@
 import ProductCard from 'components/ProductCard';
-import { Product } from 'types/product';
+import { PlpProductCard } from 'types/product';
 import { Link } from 'react-router-dom';
 import Pagination from 'components/Pagination';
 import { useState, useEffect } from 'react';
@@ -9,39 +9,41 @@ import { AxiosRequestConfig } from 'axios';
 import CardLoader from './CardLoader';
 
 import './styles.css';
+import ProductFilter from 'components/ProductFilter';
+import { PlpPageMock } from 'util/mocks';
 
 const Catalog = () => {
-  const [page, setPage] = useState<SpringPage<Product>>();
+  const [page, setPage] = useState<SpringPage<PlpProductCard>>(PlpPageMock);
   const [isLoading, setIsLoading] = useState(false);
 
-  const getProducts = (pageNumber: number) => {
-    const params: AxiosRequestConfig = {
-      method: 'GET',
-      url: '/products',
-      params: {
-        page: pageNumber,
-        size: 12,
-      },
-    };
+  // const getProducts = (pageNumber: number) => {
+  //   const params: AxiosRequestConfig = {
+  //     method: 'GET',
+  //     url: '/products',
+  //     params: {
+  //       page: pageNumber,
+  //       size: 12,
+  //     },
+  //   };
 
-    setIsLoading(true);
-    requestBackend(params)
-      .then((response) => {
-        setPage(response.data);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }
+  //   setIsLoading(true);
+  //   requestBackend(params)
+  //     .then((response) => {
+  //       setPage(response.data);
+  //     })
+  //     .finally(() => {
+  //       setIsLoading(false);
+  //     });
+  // };
 
-  useEffect(() => {
-    getProducts(0);
-  }, []);
+  // useEffect(() => {
+  //   getProducts(0);
+  // }, []);
 
   return (
     <div className="container my-4 catalog-container">
-      <div className="row catalog-title-container">
-        <h1>Catálogo de produtos</h1>
+      <div className="mb-5">
+        <ProductFilter />
       </div>
 
       <div className="row">
@@ -59,10 +61,10 @@ const Catalog = () => {
       </div>
 
       <div className="row">
-        <Pagination 
-          pageCount={page ? page.totalPages : 0} 
-          range={3} 
-          onChange={getProducts}
+        <Pagination
+          pageCount={page ? page.totalPages : 0}
+          range={3}
+          // onChange={getProducts}
         />
       </div>
     </div>

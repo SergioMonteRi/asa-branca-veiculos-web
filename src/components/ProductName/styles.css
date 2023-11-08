@@ -1,0 +1,8 @@
+.product-name-container {
+  display: flex;
+  color: #263238;
+}
+
+.product-name-container h2 {
+  color: #263238;
+}

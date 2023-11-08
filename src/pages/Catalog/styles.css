@@ -1,5 +1,6 @@
 .catalog-container {
   font-size: 18px;
+  padding: 0px 10%;
 }
 
 .catalog-title-container {
@@ -14,6 +15,6 @@
 
 @media (min-width: 576px) {
   .catalog-container {
-    font-size: 30px;
+    padding: unset;
   }
 }

@@ -1,0 +1,30 @@
+.social-media-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+  margin: 16px 0;
+}
+
+.social-media-container img {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .social-media-container {
+    margin: 32px 0;
+  }
+
+  .social-media-container img {
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .social-media-container {
+    justify-content: flex-start;
+  }
+}

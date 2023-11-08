@@ -47,8 +47,8 @@ const Form = () => {
         setValue('name', product.name);
         setValue('price', product.price);
         setValue('description', product.description);
-        setValue('imgUrl', product.imgUrl);
-        setValue('categories', product.categories);
+        // setValue('imgUrl', product.imgUrl);
+        // setValue('categories', product.categories);
       });
     }
   }, [isEditing, productId, setValue]);
@@ -67,13 +67,13 @@ const Form = () => {
     };
 
     requestBackend(config)
-    .then(() => {
-      toast.info('Produto cadastrado com sucesso');
-      history.push('/admin/products');
-    })
-    .catch(() => {
-      toast.error('Erro ao cadastrar produto');
-    });
+      .then(() => {
+        toast.info('Produto cadastrado com sucesso');
+        history.push('/admin/products');
+      })
+      .catch(() => {
+        toast.error('Erro ao cadastrar produto');
+      });
   };
 
   const handleCancel = () => {
@@ -106,8 +106,10 @@ const Form = () => {
                 </div>
               </div>
 
-              <div className="margin-bottom-30 ">
-                <label htmlFor="categories" className="d-none">Categorias</label>
+              {/* <div className="margin-bottom-30 ">
+                <label htmlFor="categories" className="d-none">
+                  Categorias
+                </label>
                 <Controller
                   name="categories"
                   rules={{ required: true }}
@@ -131,7 +133,7 @@ const Form = () => {
                     Campo obrigatório
                   </div>
                 )}
-              </div>
+              </div> */}
 
               <div className="margin-bottom-30">
                 <Controller
@@ -142,7 +144,7 @@ const Form = () => {
                     <CurrencyInput
                       placeholder="Preço"
                       className={`form-control base-input ${
-                        errors.name ? 'is-invalid' : ''
+                        errors.price ? 'is-invalid' : ''
                       }`}
                       disableGroupSeparators={true}
                       value={field.value}
@@ -156,7 +158,7 @@ const Form = () => {
                 </div>
               </div>
 
-              <div className="margin-bottom-30">
+              {/* <div className="margin-bottom-30">
                 <input
                   {...register('imgUrl', {
                     required: 'Campo obrigatório',
@@ -176,7 +178,7 @@ const Form = () => {
                 <div className="invalid-feedback d-block">
                   {errors.imgUrl?.message}
                 </div>
-              </div>
+              </div>*/}
             </div>
             <div className="col-lg-6">
               <div>

@@ -5,7 +5,11 @@ type Props = {
 };
 
 const CategoryBadge = ({ name }: Props) => {
-  return <div className="category-badge-container">{name}</div>;
+  return (
+    <div className="category-badge-container">
+      <p>{name}</p>
+    </div>
+  );
 };
 
 export default CategoryBadge;

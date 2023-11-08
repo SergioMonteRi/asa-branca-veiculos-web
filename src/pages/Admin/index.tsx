@@ -1,8 +1,9 @@
 import { Switch } from 'react-router-dom';
-import Navbar from './Navbar';
+
 import Users from './Users';
-import PrivateRoute from 'components/PrivateRoute';
+import Navbar from './Navbar';
 import Products from './Products';
+import PrivateRoute from 'components/PrivateRoute';
 
 import './styles.css';
 

@@ -1,5 +1,6 @@
 .product-crud-container {
   max-width: 1200px;
+  margin: auto;
 }
 
 .btn-crud-add {
@@ -13,12 +14,16 @@
 }
 
 @media (min-width: 768px) {
+  .product-crud-container {
+    margin-top: 32px;
+  }
   .product-crud-bar-container {
     display: flex;
     margin-bottom: 40px;
   }
 
   .btn-crud-add {
+    width: 150px;
     height: 60px;
     margin-bottom: 0;
   }

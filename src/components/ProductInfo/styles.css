@@ -1,0 +1,21 @@
+.product-info-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.product-info-container svg {
+  width: 25px;
+  height: 25px;
+}
+
+.product-info-type {
+  color: #757272;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.product-info-data {
+  color: #e0b803;
+  font-size: 18px;
+}

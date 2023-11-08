@@ -1,6 +1,9 @@
-import { ReactComponent as MainImage } from 'assets/images/main-image.svg';
-import ButtonIcon from 'components/ButtonIcon';
 import { Link } from 'react-router-dom';
+
+import ButtonIcon from 'components/ButtonIcon';
+import SocialMedia from 'components/SocialMedia';
+
+import MainImage from 'assets/images/main-image.png';
 
 import './styles.css';
 
@@ -10,11 +13,12 @@ const Home = () => {
       <div className="base-card home-card">
         <div className="home-content-container">
           <div>
-            <h1>Conheça o melhor catálogo de produtos</h1>
+            <h1>É aqui que você encontra seu novo veículo </h1>
             <p>
-              Ajudaremos você a encontrar os melhores produtos disponíveis no
-              mercado.
+              A oportunidade para seu novo veículo se encontra aqui na Asa
+              Branca Automóveis
             </p>
+            <SocialMedia />
           </div>
           <div>
             <Link to="/products">
@@ -23,7 +27,7 @@ const Home = () => {
           </div>
         </div>
         <div className="home-image-container">
-          <MainImage />
+          <img src={MainImage} alt="Home page" />
         </div>
       </div>
     </div>
