@@ -10,6 +10,8 @@ import { isAuthenticated } from 'util/auth';
 import { removeAuthData } from 'util/storage';
 import { getTokenData } from 'util/token';
 
+import LogoImg from 'assets/images/logo.png';
+
 const Navbar = () => {
   const { authContextData, setAuthContextData } = useContext(AuthContext);
 
@@ -38,8 +40,8 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
       <div className="container-fluid">
-        <Link to="/" className="nav-logo-text">
-          <h4>Asa Branca Veículos</h4>
+        <Link to="/" className="nav-logo-icon">
+          <img src={LogoImg} alt="logo Asa Branca" />
         </Link>
         <button
           className="navbar-toggler"

@@ -1,14 +1,18 @@
 .main-nav {
-  padding-left: 40px;
+  display: flex;
   min-height: 70px;
+  padding-left: 5px;
 }
 
-.nav-logo-text {
-  color: #fff;
+.nav-logo-icon {
+  background-color: #726aa0;
+  padding: 8px;
+  border-radius: 10px;
 }
 
-.nav-logo-text:hover {
-  color: #fff;
+.nav-logo-icon img {
+  width: 200px;
+  height: 32px;
 }
 
 .main-menu {
@@ -41,6 +45,10 @@
 }
 
 @media (min-width: 768px) {
+  .main-nav {
+    padding-left: 20px;
+  }
+
   .nav-login-logout {
     display: unset;
     color: #fff;
